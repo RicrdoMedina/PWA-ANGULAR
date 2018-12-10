@@ -4,7 +4,7 @@
   "name": "Angular PWA",
   "scope": "/",
   "display": "fullscreen",
-  "start_url": "https://811f8d26.ngrok.io/",
+  "start_url": "https://a6aaad5b.ngrok.io/",
   "short_name": "Angular PWA Platzi",
   "theme_color": "transparent",
   "description": "Un app para tomar notas",
