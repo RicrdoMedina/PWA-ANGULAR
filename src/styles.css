@@ -2,3 +2,8 @@
 
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 
+@media only screen and (max-device-width: 768px) {
+  .mat-form-field {
+    width: 100%;
+  }
+}

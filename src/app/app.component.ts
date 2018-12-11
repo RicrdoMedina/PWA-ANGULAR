@@ -10,6 +10,7 @@ import {SwUpdate} from '@angular/service-worker';
 export class AppComponent implements OnInit{
   title = 'pwa';
   panelOpenState = false;
+  categories = ['Trabajo', 'Personal'];
   constructor(private swUpdate: SwUpdate){
   }
   ngOnInit(): void{
