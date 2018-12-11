@@ -7,6 +7,20 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule} from "@angular/material"
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+const firebaseconfig: any = {
+  apiKey: '<AIzaSyAM7c43JPYkvehRB4CT5Z24AQ2vvUKVqJE',
+  authDomain: 'platzinotas-991ab.firebaseapp.com',
+  databaseURL: 'https://platzinotas-991ab.firebaseio.com',
+  projectId: 'platzinotas-991ab',
+  storageBucket: 'platzinotas-991ab.appspot.com',
+  messagingSenderId: '782382976879'
+}
 
 @NgModule({
   declarations: [
@@ -20,7 +34,12 @@ import {MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule
     MatToolbarModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireModule.initializeApp(firebaseconfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
