@@ -18,22 +18,22 @@
     </mat-expansion-panel-header>
 
     <mat-form-field>
-      <input matInput placeholder="Titulo de la nota">
+      <input matInput placeholder="Titulo de la nota" [(ngModel)] ="nota.titulo">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-select placeholder="Categorias">
-        <mat-option *ngFor="let cat of categories" [value]="cat.value">
-          {{cat }}
+      <mat-select placeholder="Categorias" [(ngModel)] ="nota.categories">
+        <mat-option *ngFor="let cat of categories" [value]="cat">
+          {{cat}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
     <mat-form-field>
-      <textarea matInput placeholder="Cuerpo de la nota"></textarea>
+      <textarea matInput placeholder="Cuerpo de la nota" [(ngModel)] ="nota.cuerpo"></textarea>
     </mat-form-field>
 
-    <button mat-button>Guardar!</button>
+    <button mat-raised-button color="accent" (click)="guardarNota()">Guardar!</button>
     
   </mat-expansion-panel>
   

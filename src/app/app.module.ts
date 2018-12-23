@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }    from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import { NotesService } from './services/notes.service'
+
 const firebaseconfig: any = {
   apiKey: '<AIzaSyAM7c43JPYkvehRB4CT5Z24AQ2vvUKVqJE',
   authDomain: 'platzinotas-991ab.firebaseapp.com',
@@ -21,7 +24,6 @@ const firebaseconfig: any = {
   storageBucket: 'platzinotas-991ab.appspot.com',
   messagingSenderId: '782382976879'
 }
-
 @NgModule({
   declarations: [
     AppComponent
@@ -43,9 +45,10 @@ const firebaseconfig: any = {
     MatOptionModule,
     MatSelectModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
