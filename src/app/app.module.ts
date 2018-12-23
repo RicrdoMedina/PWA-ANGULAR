@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule,  MatListModule, MatButtonModule} from "@angular/material"
+import {MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule,  MatListModule, MatButtonModule, MatSnackBarModule} from "@angular/material"
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -24,6 +24,7 @@ const firebaseconfig: any = {
   storageBucket: 'platzinotas-991ab.appspot.com',
   messagingSenderId: '782382976879'
 }
+
 @NgModule({
   declarations: [
     AppComponent
@@ -46,7 +47,8 @@ const firebaseconfig: any = {
     MatSelectModule,
     MatListModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [NotesService],
   bootstrap: [AppComponent]
