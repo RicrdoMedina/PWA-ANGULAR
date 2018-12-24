@@ -40,7 +40,7 @@
 </mat-accordion>
 
 <mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let nota of notas">
+  <mat-list-item role="listitem" *ngFor="let nota of notas" (click)="seleccionarNota(nota)">
     <h3 matLine> {{nota.titulo}} </h3>
     <p matLine>{{nota.cuerpo}}</p>
     <small matLine>{{nota.categories}} - {{nota.id | date}}</small>

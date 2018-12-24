@@ -45,6 +45,9 @@ export class AppComponent implements OnInit{
       duration: 2000,
     });
   }
+  seleccionarNota (nota) {
+    console.log(nota)
+  }
 }
 
 
