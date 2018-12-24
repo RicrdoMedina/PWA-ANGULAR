@@ -40,21 +40,11 @@
 </mat-accordion>
 
 <mat-list role="list">
-  <mat-list-item role="listitem">Titulo 1</mat-list-item>
-  <mat-list-item role="listitem">Cuerpo 1</mat-list-item>
-  <mat-list-item role="listitem">Categoria 1</mat-list-item>
-</mat-list>
-
-<mat-list role="list">
-  <mat-list-item role="listitem">Titulo 2</mat-list-item>
-  <mat-list-item role="listitem">Cuerpo 2</mat-list-item>
-  <mat-list-item role="listitem">Categoria 2</mat-list-item>
-</mat-list>
-
-<mat-list role="list">
-  <mat-list-item role="listitem">Titulo 3</mat-list-item>
-  <mat-list-item role="listitem">Cuerpo 3</mat-list-item>
-  <mat-list-item role="listitem">Categoria 3</mat-list-item>
+  <mat-list-item role="listitem" *ngFor="let nota of notas">
+    <h3 matLine> {{nota.titulo}} </h3>
+    <p matLine>{{nota.cuerpo}}</p>
+    <small matLine>{{nota.categories}} - {{nota.id | date}}</small>
+  </mat-list-item>
 </mat-list>
 
 <router-outlet></router-outlet>

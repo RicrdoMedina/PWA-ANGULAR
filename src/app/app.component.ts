@@ -16,7 +16,12 @@ export class AppComponent implements OnInit{
   panelOpenState: boolean = false;
   categories: any = ['Trabajo', 'Personal'];
   nota : any = {};
+  notas : any = [];
   constructor(private swUpdate: SwUpdate, private notesService: NotesService, public snackBar: MatSnackBar){
+    this.notesService.getNotes().valueChanges().subscribe((fbNotas) => {
+      this.notas = fbNotas
+      console.log(this.notas)
+    })
   }
   ngOnInit(): void{
     if (this.swUpdate.isEnabled) {
