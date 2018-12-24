@@ -6,6 +6,35 @@
   background: gray;
 }
 
+.mat-expansion-panel, .nota-lista {
+  margin: .5rem !important;
+  position: relative;
+}
+.fecha-nota {
+  font-size: .85rem;
+  opacity: .5;
+  font-style: italic;
+  float: right;
+  font-weight: normal;
+}
+.icono-eliminar{
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: red;
+  padding: 5px;
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: .9em;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icono-eliminar:active, .icono-eliminar:hover{
+  opacity:1;
+}
+
 @media only screen and (max-device-width: 768px) {
   .mat-form-field {
     width: 100%;

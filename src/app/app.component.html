@@ -33,18 +33,23 @@
       <textarea matInput placeholder="Cuerpo de la nota" [(ngModel)] ="nota.cuerpo"></textarea>
     </mat-form-field>
 
-    <button mat-raised-button color="accent" (click)="guardarNota()">Guardar!</button>
+    <button mat-raised-button color="primary" (click)="guardarNota()">Guardar!</button>
+
+    <button mat-raised-button color="accent" (click)="limpiarNota()">Limpiar!</button>
     
   </mat-expansion-panel>
   
 </mat-accordion>
 
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let nota of notas" (click)="seleccionarNota(nota)">
-    <h3 matLine> {{nota.titulo}} </h3>
+<mat-card class="nota-lista" *ngFor="let nota of notas" (click)="seleccionarNota(nota)">
+    <h3 matLine>{{nota.titulo}}
+    </h3>
     <p matLine>{{nota.cuerpo}}</p>
-    <small matLine>{{nota.categories}} - {{nota.id | date}}</small>
-  </mat-list-item>
-</mat-list>
+    <small matLine>
+      {{nota.categories}}
+      <div class='fecha-nota'>{{nota.id | date}}</div>
+    </small>
+    <div class='icono-eliminar' (click)="eliminarNota(nota)">❌</div>
+  </mat-card>
 
 <router-outlet></router-outlet>

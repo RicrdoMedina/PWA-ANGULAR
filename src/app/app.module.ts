@@ -7,7 +7,18 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule,  MatListModule, MatButtonModule, MatSnackBarModule} from "@angular/material"
+import {
+  MatToolbarModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatListModule,
+  MatSnackBarModule,
+  MatCardModule
+} from "@angular/material";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -48,7 +59,8 @@ const firebaseconfig: any = {
     MatListModule,
     MatButtonModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [NotesService],
   bootstrap: [AppComponent]
